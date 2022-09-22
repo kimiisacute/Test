@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/navigate_shouye"
+            android:layout_width="wrap_content"
+            android:layout_height="85px"
+            android:layout_weight="1"
+            android:src="@drawable/shouye" />
+
+        <ImageView
+            android:id="@+id/navigate_fenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="85px"
+            android:layout_weight="1"
+            android:src="@drawable/fenlei" />
+
+        <ImageView
+            android:id="@+id/navigate_gouwuche"
+            android:layout_width="wrap_content"
+            android:layout_height="85px"
+            android:layout_weight="1"
+            android:src="@drawable/gouwuche" />
+
+        <ImageView
+            android:id="@+id/navigate_wode"
+            android:layout_width="wrap_content"
+            android:layout_height="85px"
+            android:layout_weight="1"
+            android:src="@drawable/wode" />
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unny_main"
+        android:layout_above="@id/ll">
+    </FrameLayout>
+
+</RelativeLayout>
