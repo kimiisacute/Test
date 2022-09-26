@@ -5,14 +5,7 @@
     android:id="@+id/chip2"
     android:background="@drawable/beijing"
     >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/wwa"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/wwwa"/>
+
 
 
 </RelativeLayout>
