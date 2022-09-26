@@ -1,14 +1,15 @@
-package com.example.unny;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+package com.example.unny.activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.unny.R;
 import com.example.unny.framgement.FenLeiFragment;
 import com.example.unny.framgement.GouWuCheFragment;
 import com.example.unny.framgement.HomeFragment;
