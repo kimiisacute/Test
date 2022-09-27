@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".framgement.WoDeFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/iv_title"
+        android:src="@drawable/touxiang"
+        android:layout_gravity="center_horizontal"
+       />
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_login"
+        android:text="点击登录"
+        android:layout_gravity="center_horizontal"/>
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="wode" />
+        android:layout_height="wrap_content"
+        android:id="@+id/mylist"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
 
-</FrameLayout>
+</LinearLayout>
