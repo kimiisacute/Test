@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".framgement.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="shouye" />
+        android:layout_height="wrap_content"
+        android:background="#FFC68F"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unny不只是水果"
+                android:textSize="25sp"
+                android:layout_weight="2"
+                android:textColor="#F5F5F5" />
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/sd"
+                android:id="@+id/sd_a"
+                android:scaleType="fitEnd" />
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/fh"
+                android:id="@+id/fh_1"
+                android:scaleType="fitEnd" />
 
-</FrameLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#F5F5F5"
+            android:text="更有健康"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_find"
+                android:background="#F5F5F5"
+                android:layout_weight="1"
+                android:hint="搜索商品，好货等你"/>
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="搜索"
+                android:textColor="@color/black"
+                android:background="#A35408"
+                android:id="@+id/et_sou"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gv_home"
+        android:numColumns="2"/>
+
+
+</LinearLayout>
