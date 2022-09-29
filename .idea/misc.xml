@@ -3,31 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/app/src/main/res/layout/activity_main.xml" value="0.175" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/activity_address.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/activity_myinfo.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/activity_slapsh.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/fragment_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/home_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/jjiii.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test/unny/src/main/res/layout/yyss.xml" value="0.1" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/app/src/main/res/layout/activity_main.xml" value="0.24048913043478262" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/drawable/ic_launcher_background.xml" value="0.19907407407407407" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_address.xml" value="0.1" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_cart.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_main.xml" value="0.24048913043478262" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_myinfo.xml" value="0.1" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_order.xml" value="0.1" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_slapsh.xml" value="0.1" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/fragment_fen_lei.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/fragment_gou_wu_che.xml" value="0.24048913043478262" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/fragment_home.xml" value="0.24048913043478262" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/fragment_wo_de.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/haha.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/fragment_wo_de.xml" value="0.24048913043478262" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/hello.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/jjiii.xml" value="0.22735507246376813" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/mylist_items.xml" value="0.1" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/test.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/test11.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/testss.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/tt.xml" value="0.14635416666666667" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/uu.xml" value="0.22735507246376813" />
-        <entry key="..\:/Users/Kimi/AndroidStudioProjects/Unny/unny/src/main/res/layout/yyss.xml" value="0.14635416666666667" />
       </map>
     </option>
   </component>
@@ -36,5 +35,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3333333333333333" />
+      </ProjectState>
+    </option>
   </component>
 </project>
