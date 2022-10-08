@@ -19,7 +19,8 @@
                 android:text="Unny不只是水果"
                 android:textSize="25sp"
                 android:layout_weight="2"
-                android:textColor="#F5F5F5" />
+                android:textColor="#F5F5F5"
+                android:layout_marginLeft="20dp"/>
             <ImageView
                 android:layout_width="50px"
                 android:layout_height="50px"
@@ -33,13 +34,15 @@
                 android:id="@+id/fh_1"
                 android:scaleType="fitEnd" />
 
+
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="#F5F5F5"
-            android:text="更有健康"/>
+            android:text="更有健康"
+            android:layout_marginLeft="20dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,24 +52,42 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_find"
-                android:background="#F5F5F5"
+                android:background="@drawable/sousuokuang"
                 android:layout_weight="1"
-                android:hint="搜索商品，好货等你"/>
+                android:hint="搜索商品，好货等你"
+                android:textSize="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                />
             <Button
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:text="搜索"
-                android:textColor="@color/black"
+                android:textColor="#F5F5F5"
                 android:background="#A35408"
                 android:id="@+id/et_sou"/>
         </LinearLayout>
-
     </LinearLayout>
-    <GridView
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/gv_home"
-        android:numColumns="2"/>
+        android:layout_height="130dp"
+        android:background="@drawable/bb1"
+        />
+
+       <GridView
+           android:id="@+id/gv_home"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginRight="5dp"
+           android:horizontalSpacing="10dp"
+           android:numColumns="2"
+           android:verticalSpacing="20dp" />
+   </RelativeLayout>
 
 
 </LinearLayout>
