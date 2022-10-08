@@ -4,25 +4,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFC68F"
+        android:id="@+id/bj1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@id/bj1"
+        android:background="@drawable/bb1" />
 
     <ImageView
+        android:id="@+id/iv_title"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/iv_title"
-        android:src="@drawable/touxiang"
         android:layout_gravity="center_horizontal"
-       />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bb2"
+        android:src="@drawable/bb3" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_login"
         android:text="点击登录"
+        android:layout_toRightOf="@id/iv_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
         android:layout_gravity="center_horizontal"/>
-    <ListView
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mylist"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="130dp"
+        android:numColumns="5"
         android:layout_marginRight="20dp"/>
+</RelativeLayout>
+
+
 
 </LinearLayout>
