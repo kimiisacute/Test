@@ -7,12 +7,12 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <TextView
+        android:id="@+id/bj1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#FFC68F"
-        android:id="@+id/bj1"
-        />
+        android:background="#FFC68F" />
 
     <TextView
         android:layout_width="match_parent"

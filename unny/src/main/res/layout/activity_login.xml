@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".activity.LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/bj1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFC68F" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@id/bj1"
+        android:background="@drawable/bb1" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/bb3" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="330dp"
+        android:text="账号:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="320dp"
+        android:hint="请输入你的账号"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="380dp"
+        android:text="密码:"
+        android:textSize="20dp" />
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="370dp"
+        android:hint="请输入你的密码"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/bu_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="500dp"
+        android:text="登录" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有账号？注册！"
+        android:textColor="#99ccff"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="130dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:id="@+id/cb_Remember"
+        android:layout_marginTop="420dp"
+        android:checked="true"
+        android:text="记住密码"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>
