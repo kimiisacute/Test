@@ -13,6 +13,9 @@
             android:name=".activity.OutActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.GoodsinfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MyinfoActivity"
             android:exported="false" />
         <activity

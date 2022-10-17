@@ -1,5 +1,6 @@
 package com.example.unny.framgement;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,10 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
 import com.example.unny.R;
+import com.example.unny.activity.GoodsinfoActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,7 +54,16 @@ public class HomeFragment extends Fragment {
         //实例化GridView并添加适配器
         GridView gv_home=view.findViewById(R.id.gv_home);
         gv_home.setAdapter(simpleAdapter);
-
+        //事件处理
+        gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //页面跳转并传递数据
+                Intent intent=new Intent(getActivity(), GoodsinfoActivity.class);
+                intent.putExtra("gid",i);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
