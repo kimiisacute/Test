@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".activity.LoginActivity">
+    tools:context=".activity.RegisterActivity">
 
 
     <TextView
@@ -54,8 +54,8 @@
         android:textSize="20dp" />
 
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/et_pass"
@@ -67,31 +67,16 @@
         android:textSize="15dp" />
 
     <Button
-        android:id="@+id/bu_login"
+        android:id="@+id/bu_zc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="500dp"
-        android:text="登录" />
+        android:text="注册" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="550dp"
-        android:id="@+id/tv_zc"
-        android:text="没有账号？注册！"
-        android:textColor="#99ccff" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
-        android:id="@+id/cb_Remember"
-        android:layout_marginTop="420dp"
-        android:checked="true"
-        android:text="记住密码"
-        android:textSize="15dp" />
+
+
 
 
 </RelativeLayout>
