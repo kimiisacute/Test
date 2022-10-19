@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".activity.MimaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UnnzActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ZhanghaoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.GrzxActivity"
             android:exported="false" />
         <activity

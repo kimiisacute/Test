@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.GrzxActivity"
+    tools:context=".activity.ZhanghaoActivity"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#FFC68F"
-        android:id="@+id/wo">
+        android:id="@+id/wo1">
         <ImageView
             android:layout_width="50px"
             android:layout_height="50px"
@@ -23,102 +23,120 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wo_she"
-            android:text="设置"
+            android:text="账号与安全"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:textColor="#FF000000"/>
     </LinearLayout>
-    <ImageView
-        android:id="@+id/iv_title"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/bb2"
-        android:src="@drawable/bb3" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_login"
-        android:text="点击登录"
-        android:layout_toRightOf="@id/iv_title"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="110dp"
-        android:layout_centerHorizontal="true"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/iv_title"
-        android:layout_marginTop="20dp"
-        android:id="@+id/wo_d1"
-        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/wo1"
+        android:layout_marginTop="50dp"
+        android:id="@+id/zh_d1"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/wobk">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_zh"
-            android:text="账号与安全"
+            android:id="@+id/zh_zh"
+            android:text="unny帐号"
             android:textSize="18dp"/>
         <ImageView
             android:layout_width="50px"
             android:layout_height="50px"
-            android:id="@+id/wo_xy"
+            android:id="@+id/zh_xy"
             android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_zh"
-            android:layout_marginLeft="200dp"
+            android:layout_toRightOf="@+id/zh_zh"
+            android:layout_marginLeft="210dp"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/wo_d1"
-        android:id="@+id/wo_d2"
+        android:layout_below="@+id/zh_d1"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
+        android:id="@+id/zh_d2"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/wobk">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_shdz"
-            android:text="我的收货地址"
+            android:id="@+id/zh_mm"
+            android:text="设置登录密码"
             android:textSize="18dp"/>
         <ImageView
             android:layout_width="50px"
             android:layout_height="50px"
-            android:id="@+id/wo_xy1"
+            android:id="@+id/zh_xy1"
             android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_shdz"
-            android:layout_marginLeft="181dp"
+            android:layout_toRightOf="@+id/zh_mm"
+            android:layout_marginLeft="180dp"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/wo_d2"
-        android:id="@+id/wo_d3"
+        android:layout_below="@+id/zh_d2"
+        android:id="@+id/zh_d3"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/wobk">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_xxtz"
-            android:text="消息通知"
+            android:id="@+id/zh_zhiw"
+            android:text="指纹登录"
             android:textSize="18dp"/>
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_xy2"
+            android:id="@+id/zh_xy2"
             android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_xxtz"
+            android:layout_toRightOf="@+id/zh_zhiw"
+            android:layout_marginLeft="205dp"
+            android:track="@drawable/switch_btn"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sfyz"
+        android:text="身份验证"
+        android:layout_below="@+id/zh_d3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF000000"
+        android:textSize="18dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sfyz"
+        android:id="@+id/zh_d4"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/wobk">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zh_sl"
+            android:text="扫脸验证"
+            android:textSize="18dp"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/zh_xy3"
+            android:src="@drawable/xiay"
+            android:layout_toRightOf="@+id/zh_sl"
             android:layout_marginLeft="205dp"
             android:track="@drawable/switch_btn"
             android:layout_centerHorizontal="true"/>
@@ -127,113 +145,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/wo_d3"
-        android:id="@+id/wo_d4"
+        android:layout_below="@+id/zh_d4"
+        android:id="@+id/zh_d5"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/wobk">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_zf"
-            android:text="支付"
+            android:id="@+id/zh_sy"
+            android:text="声音验证"
             android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy3"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_zf"
-            android:layout_marginLeft="252dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo_d4"
-        android:id="@+id/wo_d5"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/wo_gy"
-            android:text="关于unny好果滋"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy4"
+            android:id="@+id/zh_xy4"
             android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_gy"
-            android:layout_marginLeft="159dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo_d5"
-        android:id="@+id/wo_d6"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/wo_bzfk"
-            android:text="帮助与反馈"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy5"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_bzfk"
-            android:layout_marginLeft="197dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo_d6"
-        android:id="@+id/wo_d7"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/wo_ys"
-            android:text="隐私"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy6"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_ys"
-            android:layout_marginLeft="253dp"
+            android:layout_toRightOf="@+id/zh_sy"
+            android:layout_marginLeft="205dp"
+            android:track="@drawable/switch_btn"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/wo_tcdl"
+        android:id="@+id/zh_zxzh"
         android:gravity="center"
-        android:text="退出登录"
+        android:text="注销帐号"
         android:textSize="18dp"
-        android:layout_below="@+id/wo_d7"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_below="@+id/zh_d5"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/wobk"
         android:backgroundTint="#F7E7C1"/>
+
+
 </RelativeLayout>

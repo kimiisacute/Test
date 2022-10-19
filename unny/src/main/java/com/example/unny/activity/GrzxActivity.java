@@ -2,6 +2,7 @@ package com.example.unny.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -24,6 +26,7 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
     ImageView wo_xy4;
     ImageView wo_xy5;
     ImageView wo_xy6;
+    TextView wo_tcdl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +41,42 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
         wo_xy4=findViewById(R.id.wo_xy4);
         wo_xy5=findViewById(R.id.wo_xy5);
         wo_xy6=findViewById(R.id.wo_xy6);
+        wo_tcdl=findViewById(R.id.wo_tcdl);
 
         wo_xy2.setOnCheckedChangeListener(this);
-
+        //返回上一页面
         iv_fh.setOnClickListener(new View.OnClickListener(){
             @Override
             public void  onClick(View v){
                 finish();
             }
         });
+        //设置点击事件
+        //activity跳转activity，帐号与安全
+        wo_xy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,ZhanghaoActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
+        //退出登录
+        wo_tcdl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,LoginActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
 
     }
-
+    //开关按钮
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked){
-            Toast.makeText(GrzxActivity.this,"",Toast.LENGTH_SHORT).show();
+
         }else {
-            Toast.makeText(GrzxActivity.this,"",Toast.LENGTH_SHORT).show();
+
         }
     }
 }
