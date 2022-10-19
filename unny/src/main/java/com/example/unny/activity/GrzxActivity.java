@@ -1,16 +1,12 @@
 package com.example.unny.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
 import android.widget.Switch;
-import android.widget.Toast;
-import android.widget.ToggleButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.unny.R;
 
@@ -53,9 +49,9 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked){
-            Toast.makeText(GrzxActivity.this,"",Toast.LENGTH_SHORT).show();
+
         }else {
-            Toast.makeText(GrzxActivity.this,"",Toast.LENGTH_SHORT).show();
+
         }
     }
 }

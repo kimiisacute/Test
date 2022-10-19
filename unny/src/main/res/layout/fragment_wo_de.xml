@@ -29,15 +29,16 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/bb2"
         android:src="@drawable/bb3" />
+
     <TextView
+        android:id="@+id/tv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_login"
-        android:text="点击登录"
-        android:layout_toRightOf="@id/iv_title"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_toRightOf="@id/iv_title"
+        android:text="点击登录" />
     <ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -55,6 +56,24 @@
         android:layout_marginTop="130dp"
         android:numColumns="5"
         android:layout_marginRight="20dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/bb"
+        android:layout_marginTop="255dp"
+        android:layout_marginLeft="30dp"/>
+    <TextView
+        android:id="@+id/bj2"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:background="#E6D48C"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="30dp"
+        android:text="我的自提点"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:textColor="#917810"
+        />
 </RelativeLayout>
 
 </LinearLayout>
