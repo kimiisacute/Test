@@ -46,7 +46,7 @@ public class ZhanghaoActivity extends AppCompatActivity implements CompoundButto
         zh_xy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(ZhanghaoActivity.this,ZhanghaoActivity.class);
+                Intent intent1=new Intent(ZhanghaoActivity.this,UnnzActivity.class);
                 startActivityForResult(intent1,1);
             }
         });
@@ -54,7 +54,7 @@ public class ZhanghaoActivity extends AppCompatActivity implements CompoundButto
         zh_xy1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1=new Intent(ZhanghaoActivity.this,ZhanghaoActivity.class);
+                Intent intent1=new Intent(ZhanghaoActivity.this,MimaActivity.class);
                 startActivityForResult(intent1,1);
             }
         });
