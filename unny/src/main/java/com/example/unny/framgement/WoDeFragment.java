@@ -16,10 +16,12 @@ import androidx.fragment.app.Fragment;
 import com.example.unny.R;
 import com.example.unny.activity.AddressActivity;
 import com.example.unny.activity.CartActivity;
+import com.example.unny.activity.GrzxActivity;
 import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
+import com.example.unny.activity.RegisterActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,6 +42,15 @@ public class WoDeFragment extends Fragment {
         ImageView myTitle=view.findViewById(R.id.iv_title);
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
+        ImageView iv_shez=view.findViewById(R.id.iv_shez);
+        //设置点击事件
+        iv_shez.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                startActivity(intent);
+            }
+        });
         //判断当前用户的状态，如果有用户信息，就自动登录，显示用户头像和姓名；
         //如果没有用户信息，即显示请登录。
         //跳转到登录页面
@@ -50,6 +61,7 @@ public class WoDeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         //设置listview
         String[] names={"待付款","待发货","待收货","待评价","退款/售后"};
         int[]imgs={R.drawable.daifukuan,R.drawable.daifahuo,R.drawable.daishouhuo,R.drawable.daipingjia,R.drawable.tuikuan};
