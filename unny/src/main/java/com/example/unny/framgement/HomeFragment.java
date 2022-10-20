@@ -28,8 +28,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view=inflater.inflate(R.layout.fragment_home,container,false);
-       //商品推荐
+        View view=inflater.inflate(R.layout.fragment_home,container,false);
+        //商品推荐
         // 定义数据
         String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗李子","海沃德猕猴桃","红富士苹果","蓬莱柿无花果"};
         int images[]={R.drawable.caomei2,R.drawable.lanm2,R.drawable.lizi2,R.drawable.miht2,R.drawable.pingg2,R.drawable.wuhg2};
