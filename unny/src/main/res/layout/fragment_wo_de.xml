@@ -48,32 +48,83 @@
         android:layout_alignTop="@+id/iv_title"
         android:layout_toRightOf="@+id/tv_login"/>
 
+    <ImageView
+        android:id="@+id/iv_shouchang"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/shouchang" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收藏"
+        android:textSize="12dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="58dp"/>
+
+    <ImageView
+        android:id="@+id/iv_qianbao"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/qianbao" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="钱包"
+        android:textSize="12dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="163dp"/>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/iv_zuji"
+        android:src="@drawable/zuji"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="260dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="足迹"
+        android:textSize="12dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="268dp"/>
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bb" />
     <GridView
+        android:id="@+id/mylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mylist"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="130dp"
-        android:numColumns="5"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginTop="235dp"
+        android:layout_marginRight="20dp"
+        android:numColumns="5" />
     <TextView
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:background="@drawable/bb"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="325dp"
         android:layout_marginLeft="30dp"/>
+
     <TextView
         android:id="@+id/bj2"
         android:layout_width="300dp"
         android:layout_height="25dp"
-        android:background="#E6D48C"
-        android:layout_marginTop="250dp"
         android:layout_marginLeft="30dp"
-        android:text="我的自提点"
+        android:layout_marginTop="320dp"
+        android:background="#E6D48C"
         android:gravity="center"
-        android:textSize="12dp"
+        android:text="我的自提点"
         android:textColor="#917810"
-        />
+        android:textSize="12dp" />
 </RelativeLayout>
 
 </LinearLayout>
