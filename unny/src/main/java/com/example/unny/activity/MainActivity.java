@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.unny.R;
 import com.example.unny.framgement.FenLeiFragment;
-import com.example.unny.framgement.GouWuCheFragment;
+import com.example.unny.framgement.GouacheFragment;
 import com.example.unny.framgement.HomeFragment;
 import com.example.unny.framgement.WoDeFragment;
 
@@ -19,7 +19,6 @@ import com.example.unny.framgement.WoDeFragment;
 首页实现导航栏切换
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     ImageView iv_shouye,iv_gouwuche,iv_fenlei,iv_wode;//导航栏四个图片
     FragmentManager fragmentManager;//管理器
     FragmentTransaction fragmentTransaction;//事务管理
@@ -74,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.commit();
                 break;
             case R.id.navigate_gouwuche:
-                GouWuCheFragment gouwucheFragment=new GouWuCheFragment();
-                fragmentTransaction.replace(R.id.unny_main,gouwucheFragment);
+                GouacheFragment GouwucheFragment =new GouacheFragment();
+                fragmentTransaction.replace(R.id.unny_main, GouwucheFragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.navigate_wode:

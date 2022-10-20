@@ -21,7 +21,6 @@ import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
-import com.example.unny.activity.RegisterActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
