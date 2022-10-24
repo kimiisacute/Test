@@ -58,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences=getSharedPreferences("user",0);
         lg_name.setText(sharedPreferences.getString("lg_name",""));
         lg_psw.setText(sharedPreferences.getString("lg_psw",""));
+        //登录按钮
         btn_login.setOnClickListener(view -> {
             if (lg_name.getText().toString().equals("") || lg_psw.getText().toString().equals("")){
                 Toast.makeText(LoginActivity.this, "账号或密码不能为空", Toast.LENGTH_SHORT).show();
