@@ -159,6 +159,50 @@
         android:layout_marginTop="415dp"
         android:layout_marginLeft="60dp"
         android:textSize="10dp"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bb4"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="60dp"
+        android:text="联系门店"
+        android:textColor="#FF8C00"
+        android:textSize="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bb4"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="200dp"
+        android:text="导航去门店"
+        android:textColor="#FF8C00"
+        android:textSize="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="490dp"
+        android:background="#FFC68F" />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/anquan"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="60dp"/>
+
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="490dp"
+        android:background="#FFC68F"
+        android:gravity="center_vertical"
+        android:text="如您购买的商品有任何问题，请直接与购买门店
+联系，门店会为您处理，让您售后无忧"
+        android:textSize="10dp" />
 
 
     <TextView
