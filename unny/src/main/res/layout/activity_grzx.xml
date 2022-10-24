@@ -117,7 +117,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wo_xy2"
-            android:src="@drawable/xiay"
             android:layout_toRightOf="@+id/wo_xxtz"
             android:layout_marginLeft="205dp"
             android:track="@drawable/switch_btn"

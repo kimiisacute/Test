@@ -60,6 +60,22 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
                 startActivityForResult(intent1,1);
             }
         });
+        //跳转收货地址
+        wo_xy1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,ShouhdzActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
+        //跳转支付
+        wo_xy3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,ZhifActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
         //退出登录
         wo_tcdl.setOnClickListener(new View.OnClickListener() {
             @Override

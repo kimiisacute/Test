@@ -8,13 +8,13 @@ import android.widget.ImageView;
 
 import com.example.unny.R;
 
-public class UnnzActivity extends AppCompatActivity {
+public class TjdzhiActivity extends AppCompatActivity {
     ImageView iv_fh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_unnz);
+        setContentView(R.layout.activity_tjdzhi);
 
         iv_fh=findViewById(R.id.iv_fh);
 
