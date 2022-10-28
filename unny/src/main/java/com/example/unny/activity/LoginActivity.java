@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText lg_name,lg_psw;
     Button btn_login;
     SQLiteDatabase db;
+    String putStringGender;
     private EditText etUsername;
     private EditText etPassword;
     private String strUsername;
@@ -55,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         } catch (Exception e){
             e.printStackTrace();
         }
-        SharedPreferences sharedPreferences=getSharedPreferences("user",0);
+        SharedPreferences sharedPreferences=getSharedPreferences("lg_name",MODE_PRIVATE);//MODE_PRIVATE模式表示访问权限为本应用
         lg_name.setText(sharedPreferences.getString("lg_name",""));
         lg_psw.setText(sharedPreferences.getString("lg_psw",""));
         //登录按钮
@@ -67,7 +68,11 @@ public class LoginActivity extends AppCompatActivity {
             @SuppressLint("Recycle") Cursor cursor=db.rawQuery("select * from user where username='"+lg_name.getText().toString()+"'",null);
             if (cursor.moveToNext()){
                 if (cursor.getString(1).equals(lg_psw.getText().toString())){
-                    SharedPreferences.Editor editor=getSharedPreferences("lg_name",0).edit();
+                    SharedPreferences.Editor editor=getSharedPreferences("lg_name",MODE_PRIVATE).edit();
+                    SharedPreferences.Editor user_editor = sharedPreferences.edit();
+                    user_editor.putString("name", putStringGender);
+                    user_editor.commit();//最后提交保存
+                    putStringGender = lg_name.getText().toString();
                     Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_LONG).show();
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                     editor.apply();
