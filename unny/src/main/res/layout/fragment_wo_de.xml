@@ -39,14 +39,15 @@
         android:layout_marginTop="70dp"
         android:layout_toRightOf="@id/iv_title"
         android:text="点击登录" />
+
     <ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:src="@drawable/sz"
         android:id="@+id/iv_shez"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="300dp"
         android:layout_alignTop="@+id/iv_title"
-        android:layout_toRightOf="@+id/tv_login"/>
+        />
 
     <ImageView
         android:id="@+id/iv_shouchang"
@@ -159,19 +160,22 @@
         android:layout_marginTop="415dp"
         android:layout_marginLeft="60dp"
         android:textSize="10dp"/>
+
     <TextView
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:background="@drawable/bb4"
-        android:layout_marginTop="450dp"
+        android:id="@+id/tv_lianxi"
         android:layout_marginLeft="60dp"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/bb4"
+        android:gravity="center"
         android:text="联系门店"
         android:textColor="#FF8C00"
-        android:textSize="10dp"
-        android:gravity="center"/>
+        android:textSize="10dp" />
     <TextView
         android:layout_width="100dp"
         android:layout_height="20dp"
+        android:id="@+id/daohang"
         android:background="@drawable/bb4"
         android:layout_marginTop="450dp"
         android:layout_marginLeft="200dp"

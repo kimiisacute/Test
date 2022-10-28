@@ -1,6 +1,8 @@
 package com.example.unny.framgement;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +41,8 @@ public class WoDeFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_wo_de, container, false);
         //从视图中获得了控件
         ImageView myTitle=view.findViewById(R.id.iv_title);
+        //调用shared preference
+       // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
@@ -51,6 +55,15 @@ public class WoDeFragment extends Fragment {
             }
         });
         //判断当前用户的状态，如果有用户信息，就自动登录，显示用户头像和姓名；
+        myName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView set_gender = view.findViewById(R.id.tv_login);
+                SharedPreferences sharedPreferences=getActivity().getSharedPreferences("lg_name", Context.MODE_PRIVATE);
+                String getStringGender = sharedPreferences.getString("name",null);
+                set_gender.setText(getStringGender);
+            }
+        });
         //如果没有用户信息，即显示请登录。
         //跳转到登录页面
         myTitle.setOnClickListener(new View.OnClickListener() {
