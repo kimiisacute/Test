@@ -60,7 +60,7 @@ public class WoDeFragment extends Fragment {
             public void onClick(View v) {
                 TextView set_gender = view.findViewById(R.id.tv_login);
                 SharedPreferences sharedPreferences=getActivity().getSharedPreferences("lg_name", Context.MODE_PRIVATE);
-                String getStringGender = sharedPreferences.getString("name","");
+                String getStringGender = sharedPreferences.getString("name",null);
                 set_gender.setText(getStringGender);
             }
         });

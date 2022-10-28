@@ -70,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (cursor.getString(1).equals(lg_psw.getText().toString())){
                     SharedPreferences.Editor editor=getSharedPreferences("lg_name",MODE_PRIVATE).edit();
                     SharedPreferences.Editor user_editor = sharedPreferences.edit();
+                    putStringGender = lg_name.getText().toString();
                     user_editor.putString("name", putStringGender);
                     user_editor.commit();//最后提交保存
-                    putStringGender = lg_name.getText().toString();
                     Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_LONG).show();
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                     editor.apply();
