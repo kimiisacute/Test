@@ -1,5 +1,6 @@
 package com.example.unny.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -11,7 +12,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.unny.R;
 import com.example.unny.framgement.FenLeiFragment;
-import com.example.unny.framgement.GouacheFragment;
 import com.example.unny.framgement.HomeFragment;
 import com.example.unny.framgement.WoDeFragment;
 
@@ -73,9 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.commit();
                 break;
             case R.id.navigate_gouwuche:
-                GouacheFragment GouwucheFragment =new GouacheFragment();
-                fragmentTransaction.replace(R.id.unny_main, GouwucheFragment);
-                fragmentTransaction.commit();
+                Intent intent=new Intent(this,CartActivity.class);
+                startActivity(intent);
                 break;
             case R.id.navigate_wode:
                 WoDeFragment wodeFragment=new WoDeFragment();

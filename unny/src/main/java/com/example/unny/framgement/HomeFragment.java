@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_home,container,false);
         //商品推荐
         // 定义数据
-        String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗李子","海沃德猕猴桃","红富士苹果","蓬莱柿无花果"};
+        String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗甜李子","海沃德猕猴桃","红富士大苹果","蓬莱柿无花果"};
         int images[]={R.drawable.caomei2,R.drawable.lanm2,R.drawable.lizi2,R.drawable.miht2,R.drawable.pingg2,R.drawable.wuhg2};
         String price[]={"￥18.8","￥20.8","￥3.8","￥4.5","￥2.58","￥8.89"};
         String youh[]={"买三送一","买二送一","买三送一","买三送一","买三送一","买三送一"};

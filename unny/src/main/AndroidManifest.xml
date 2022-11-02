@@ -11,7 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
-            android:name=".activity.MimaActivity"
+            android:name=".ComfireActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
             android:name=".activity.UnnzActivity"
@@ -37,7 +47,6 @@
         <activity
             android:name=".activity.OrderActivity"
             android:exported="false" />
-
         <activity
             android:name=".activity.AddressActivity"
             android:exported="false" />
