@@ -177,31 +177,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/wo_d5"
-        android:id="@+id/wo_d6"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/wo_bzfk"
-            android:text="帮助与反馈"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy5"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_bzfk"
-            android:layout_marginLeft="197dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo_d6"
         android:id="@+id/wo_d7"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"

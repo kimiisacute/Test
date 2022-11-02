@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".activity.BzfkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GuanyActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ZhifActivity"
             android:exported="false" />
         <activity

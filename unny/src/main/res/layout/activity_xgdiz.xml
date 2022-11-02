@@ -50,7 +50,6 @@
             android:layout_height="30dp"
             android:layout_toRightOf="@+id/xgdz_ren"
             android:id="@+id/xgdz_ku"
-            android:hint="Alice"
             android:textSize="15dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/bjj"/>
@@ -76,7 +75,6 @@
             android:layout_height="30dp"
             android:layout_toRightOf="@+id/xgdz_phone"
             android:id="@+id/xgdz_ku1"
-            android:hint="123455666"
             android:textSize="15dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/bjj"/>
@@ -102,7 +100,6 @@
             android:layout_height="30dp"
             android:layout_toRightOf="@+id/xgdz_diq"
             android:id="@+id/xgdz_ku2"
-            android:hint="成都"
             android:textSize="15dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/bjj"/>
@@ -128,12 +125,11 @@
             android:layout_height="70dp"
             android:layout_toRightOf="@+id/xgdz_xxi"
             android:id="@+id/xgdz_ku3"
-            android:hint="成都市温江区"
             android:textSize="15dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/bjj"/>
     </RelativeLayout>
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/qrj"

@@ -24,7 +24,6 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
     private Switch wo_xy2;
     ImageView wo_xy3;
     ImageView wo_xy4;
-    ImageView wo_xy5;
     ImageView wo_xy6;
     TextView wo_tcdl;
 
@@ -39,7 +38,6 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
         wo_xy2=(Switch) findViewById(R.id.wo_xy2);
         wo_xy3=findViewById(R.id.wo_xy3);
         wo_xy4=findViewById(R.id.wo_xy4);
-        wo_xy5=findViewById(R.id.wo_xy5);
         wo_xy6=findViewById(R.id.wo_xy6);
         wo_tcdl=findViewById(R.id.wo_tcdl);
 
@@ -73,6 +71,22 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
             @Override
             public void onClick(View view) {
                 Intent intent1=new Intent(GrzxActivity.this,ZhifActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
+        //跳转关于
+        wo_xy4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,GuanyActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
+        //隐私
+        wo_xy6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(GrzxActivity.this,BzfkActivity.class);
                 startActivityForResult(intent1,1);
             }
         });
