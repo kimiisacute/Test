@@ -120,7 +120,7 @@
             android:textSize="13dp"
             android:background="@drawable/bjj"/>
     </RelativeLayout>
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/qrj"

@@ -29,65 +29,11 @@
             android:layout_marginLeft="30dp"
             android:textColor="#FF000000"/>
     </LinearLayout>
-    <RelativeLayout
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo"
         android:layout_marginTop="20dp"
-        android:id="@+id/wo_d1"
-        android:background="@drawable/wobk">
-        <ImageView
-            android:layout_width="90px"
-            android:layout_height="90px"
-            android:src="@drawable/fahuo"
-            android:id="@+id/sh_cc"
-            android:layout_marginLeft="20dp"
-            android:layout_centerVertical="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dz_mz"
-            android:layout_toRightOf="@+id/sh_cc"
-            android:layout_marginLeft="15dp"
-            android:textColor="#FF000000"
-            android:text="Alice"
-            android:textSize="18dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dz_hm"
-            android:layout_toRightOf="@+id/dz_mz"
-            android:layout_marginLeft="15dp"
-            android:text="11234567897"
-            android:textSize="15dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dz_mc"
-            android:layout_toRightOf="@+id/sh_cc"
-            android:layout_below="@+id/dz_mz"
-            android:layout_marginLeft="15dp"
-            android:text="成都"
-            android:textSize="18dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dz_xx"
-            android:layout_toRightOf="@+id/dz_mc"
-            android:layout_below="@+id/dz_mz"
-            android:layout_marginLeft="15dp"
-            android:text="成都市温江区"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="80px"
-            android:layout_height="80px"
-            android:id="@+id/dz_xg"
-            android:src="@drawable/bi"
-            android:layout_toRightOf="@+id/sh_cc"
-            android:layout_marginLeft="260dp"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
+        android:id="@+id/list_tj"/>
     <Button
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -98,7 +44,7 @@
         android:textColor="#FF000000"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/xqym"/>
 
 </RelativeLayout>

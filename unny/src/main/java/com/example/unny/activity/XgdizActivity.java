@@ -45,10 +45,6 @@ public class XgdizActivity extends AppCompatActivity {
                 Bundle bundle=new Bundle();
                 Intent i=getIntent();
                 bundle=i.getExtras();
-                String us=bundle.getString("u_name");
-                String ps=bundle.getString("p_name");
-                String ds=bundle.getString("d_name");
-                String zs=bundle.getString("z_name");
                 //对主activity传输过来的内容进行处理，然后传递回主activity
                 bundle.putCharSequence("uname", e1.getText().toString());
                 bundle.putCharSequence("phone", e2.getText().toString());
