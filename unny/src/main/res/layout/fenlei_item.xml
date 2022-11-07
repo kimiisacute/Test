@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/bb">
+
+    <ImageView
+        android:id="@+id/iv_xigua"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/xigua" />
+
+    <TextView
+        android:id="@+id/tv_xg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_xigua"
+        android:text="新鲜现摘8424麒麟西瓜"
+        android:textSize="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="美都薄皮脆甜瓜当季无"
+        android:layout_toRightOf="@id/iv_xigua"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tv_xg1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_xigua"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv_xg2"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_xg2"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_xigua"
+        android:text="￥18.8起"
+        android:textColor="#FF0000"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

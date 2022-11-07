@@ -1,14 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".framgement.FenLeiFragment">
+    android:layout_height="wrap_content"
+    tools:context=".activity.RegisterActivity">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/bj1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFC68F" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fenlei" />
+        android:layout_height="130dp"
+        android:layout_below="@id/bj1"
+        android:background="@drawable/bb1" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="分类"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/tv_tv1"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bb" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="瓜类"
+        android:textSize="15dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="30dp"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_xigua"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/xigua" />
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_mugua"
+        android:src="@drawable/mugua"
+        android:background="@drawable/bb"
+        android:layout_marginTop="88dp"
+        android:layout_marginLeft="145dp"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_xianggua"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/xianggua" />
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:id="@+id/tv_tv2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="185dp"
+        android:background="@drawable/bb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="190dp"
+        android:text="柑橘类"
+        android:textSize="15dp" />
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/xiyou"
+        android:id="@+id/iv_xiyou"
+        android:background="@drawable/bb"
+        android:layout_marginTop="213dp"
+        android:layout_marginLeft="30dp"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_chengzi"
+        android:src="@drawable/chengzi"
+        android:background="@drawable/bb"
+        android:layout_marginTop="213dp"
+        android:layout_marginLeft="145dp"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_juzi"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="213dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/juzi" />
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:id="@+id/tv_tv3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="305dp"
+        android:background="@drawable/bb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="310dp"
+        android:text="浆果类"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_putao"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="333dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/putao" />
+
+    <ImageView
+        android:id="@+id/iv_ci"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="333dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/caomei" />
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_mihoutao"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="333dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/mihoutao" />
+
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:id="@+id/tv_tv4"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="425dp"
+        android:background="@drawable/bb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="430dp"
+        android:text="核果类"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_lizi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="453dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/lizi" />
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_taozi"
+        android:src="@drawable/taozi"
+        android:background="@drawable/bb"
+        android:layout_marginTop="453dp"
+        android:layout_marginLeft="145dp"/>
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/iv_xingzi"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="453dp"
+        android:background="@drawable/bb"
+        android:src="@drawable/xingzi" />
+
+
+
+
+</RelativeLayout>

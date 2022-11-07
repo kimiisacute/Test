@@ -90,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
     }
@@ -134,6 +135,20 @@ public class LoginActivity extends AppCompatActivity {
             etUsername.setText(data.get("username"));
             etPassword.setText(data.get("password"));
             cbRemember.setChecked(true);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data == null) {
+            return;
+        }
+        if (0 == requestCode){
+            if (0 ==resultCode){
+                String s =data.getStringExtra("mes");
+
+            }
         }
     }
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/bj1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFC68F" />
+    <ImageView
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/fanhui"
+        android:id="@+id/tv_fh"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@id/bj1"
+        android:background="@drawable/bb1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="柑橘类"
+        android:textSize="23dp" />
+
+    <GridView
+        android:id="@+id/gv_ganju"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="5dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="1"
+        android:verticalSpacing="20dp" />
+
+
+
+</RelativeLayout>

@@ -11,24 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
-            android:name=".activity.BzfkActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.GuanyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ZhifActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.XgdizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.TjdzhiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ShouhdzActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.MimaActivity"
             android:exported="false" />
         <activity
@@ -55,6 +37,7 @@
         <activity
             android:name=".activity.OrderActivity"
             android:exported="false" />
+
         <activity
             android:name=".activity.AddressActivity"
             android:exported="false" />
