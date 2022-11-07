@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class GuaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gua);
+        ImageView tv_fh=findViewById(R.id.tv_fh);
         gv_gua=findViewById(R.id.gv_gua);
         //封装数据
         List<Map<String,Object>> items=new ArrayList<Map<String,Object>>();
@@ -53,6 +55,12 @@ public class GuaActivity extends AppCompatActivity {
                 Intent intent=new Intent(GuaActivity.this, GuasinfoActivity.class);
                 intent.putExtra("gid",i);
                 startActivity(intent);
+            }
+        });
+        tv_fh.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View v){
+                finish();
             }
         });
     }

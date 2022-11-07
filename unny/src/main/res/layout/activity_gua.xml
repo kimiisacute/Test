@@ -12,6 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#FFC68F" />
+    <ImageView
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/fanhui"
+        android:id="@+id/tv_fh"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
 
     <TextView
         android:layout_width="match_parent"
