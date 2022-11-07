@@ -33,7 +33,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="籽整箱包邮"
         android:layout_toRightOf="@id/iv_xigua"
         android:layout_marginLeft="30dp"
         android:textSize="15dp"

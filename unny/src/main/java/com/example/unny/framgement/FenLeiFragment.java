@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.unny.R;
+import com.example.unny.activity.GanjuActivity;
 import com.example.unny.activity.GrzxActivity;
 import com.example.unny.activity.GuaActivity;
 
@@ -62,24 +63,25 @@ public class FenLeiFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //柑橘类
         iv_xiyou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), GanjuActivity.class);
                 startActivity(intent);
             }
         });
         iv_chengzi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), GanjuActivity.class);
                 startActivity(intent);
             }
         });
         iv_juzi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), GanjuActivity.class);
                 startActivity(intent);
             }
         });
@@ -135,7 +137,7 @@ public class FenLeiFragment extends Fragment {
         tv_tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), GanjuActivity.class);
                 startActivity(intent);
             }
         });

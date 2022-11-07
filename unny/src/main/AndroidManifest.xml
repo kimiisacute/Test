@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".activity.GanjusinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GanjuActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.GuasinfoActivity"
             android:exported="false" />
         <activity
