@@ -13,5 +13,5 @@
         android:right="2dp"
         android:top="5dp" />
     //角的话，里边有参数可以单独设置
-    <corners android:radius="0dp" />
+    <corners android:radius="10dp" />
 </shape>

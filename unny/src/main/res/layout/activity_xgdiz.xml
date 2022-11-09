@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.UnnzActivity"
+    tools:context=".activity.XgdizActivity"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,114 +23,123 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wo_she"
-            android:text="修改帐号"
+            android:text="修改地址"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:textColor="#FF000000"/>
     </LinearLayout>
-    <ImageView
-        android:id="@+id/iv_title"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/bb2"
-        android:src="@drawable/bb3" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_login"
-        android:text="Alice"
-        android:textSize="19dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/iv_title"
-        android:layout_centerHorizontal="true"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/tv_login"
+        android:layout_below="@+id/wo"
         android:layout_marginTop="30dp"
-        android:id="@+id/xz"
+        android:id="@+id/xgdz"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xz_yuan"
-            android:text="原账号："
-            android:textSize="18dp"/>
+            android:id="@+id/xgdz_ren"
+            android:text="收货人"
+            android:textSize="18dp"
+            android:textColor="#FF000000"/>
         <EditText
             android:layout_width="210dp"
             android:layout_height="30dp"
-            android:layout_toRightOf="@+id/xz_yuan"
-            android:id="@+id/xz_ku"
-            android:hint="请输入原账号"
-            android:textSize="13dp"
+            android:layout_toRightOf="@+id/xgdz_ren"
+            android:id="@+id/xgdz_ku"
+            android:textSize="15dp"
+            android:layout_marginLeft="25dp"
             android:background="@drawable/bjj"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/xz"
+        android:layout_below="@+id/xgdz"
         android:layout_marginTop="20dp"
-        android:id="@+id/xz1"
+        android:id="@+id/xgdz1"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xz_xin"
-            android:text="新账号："
+            android:id="@+id/xgdz_phone"
+            android:text="手机号"
+            android:textColor="#FF000000"
             android:textSize="18dp"/>
         <EditText
             android:layout_width="210dp"
             android:layout_height="30dp"
-            android:layout_toRightOf="@+id/xz_xin"
-            android:id="@+id/xz_ku1"
-            android:hint="请输入新账号"
-            android:textSize="13dp"
+            android:layout_toRightOf="@+id/xgdz_phone"
+            android:id="@+id/xgdz_ku1"
+            android:textSize="15dp"
+            android:layout_marginLeft="25dp"
             android:background="@drawable/bjj"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/xz1"
+        android:layout_below="@+id/xgdz1"
         android:layout_marginTop="20dp"
-        android:id="@+id/xz2"
+        android:id="@+id/xgdz2"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/xz_nc"
-            android:text="昵称："
+            android:id="@+id/xgdz_diq"
+            android:text="所在地区"
+            android:textColor="#FF000000"
             android:textSize="18dp"/>
         <EditText
             android:layout_width="210dp"
             android:layout_height="30dp"
-            android:layout_toRightOf="@+id/xz_nc"
-            android:id="@+id/xz_ku2"
-            android:hint="输入昵称"
-            android:textSize="13dp"
-            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/xgdz_diq"
+            android:id="@+id/xgdz_ku2"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/bjj"/>
     </RelativeLayout>
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/xgdz2"
+        android:layout_marginTop="20dp"
+        android:id="@+id/xgdz3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/xgdz_xxi"
+            android:text="详细地址"
+            android:textColor="#FF000000"
+            android:textSize="18dp"/>
+        <EditText
+            android:layout_width="210dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@+id/xgdz_xxi"
+            android:id="@+id/xgdz_ku3"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bjj"/>
+    </RelativeLayout>
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/qrj"
         android:gravity="center"
-        android:text="确定"
+        android:text="保存"
         android:textSize="18dp"
-        android:layout_below="@+id/xz1"
-        android:layout_marginTop="80dp"
+        android:layout_below="@+id/xgdz3"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/xqym"/>
-
 
 </RelativeLayout>
