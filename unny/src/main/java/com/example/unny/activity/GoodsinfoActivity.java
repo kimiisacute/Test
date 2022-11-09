@@ -19,7 +19,7 @@ public class GoodsinfoActivity extends AppCompatActivity {
     int images[]={R.drawable.caomei4,R.drawable.lanm1,R.drawable.lizi1,R.drawable.miht1,R.drawable.pingg1,R.drawable.wuhg1};
     int images1[]={R.drawable.caomei3,R.drawable.lanm3,R.drawable.lizi3,R.drawable.miht3,R.drawable.pingg1,R.drawable.wuhg3};
     int images2[]={R.drawable.caomei4,R.drawable.lanm1,R.drawable.lizi1,R.drawable.miht1,R.drawable.pingg1,R.drawable.wuhg1};
-    String price[]={"￥18.8","￥20.8","￥3.8","￥4.5","￥2.58","￥8.89"};
+    String price[]={"￥18.8","￥20.8","￥13.8","￥14.5","￥12.5","￥18.9"};
     String xq[]={"新鲜现摘佐贺清香草莓 整箱包邮到家 好吃还不贵","新鲜现摘芭尔德温蓝莓 整箱包邮到家 好吃还不贵",
             "新鲜现摘黑布朗李子 整箱包邮到家 好吃还不贵","新鲜现摘海沃德猕猴桃 整箱包邮到家 好吃还不贵",
             "新鲜现摘红富士苹果 整箱包邮到家 好吃还不贵","新鲜现摘蓬莱柿无花果 整箱包邮到家 好吃还不贵"};
@@ -63,7 +63,6 @@ public class GoodsinfoActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         //加入购物车
         tv_jgwc.setOnClickListener(new View.OnClickListener(){
             @Override

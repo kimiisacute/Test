@@ -21,8 +21,13 @@ public class DBOpenHelp extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS cart_db(_id integer primary key autoincrement,"+
                 "name text,price float,num integer,img long)");//执行创建数据表的语句
         //创建收藏夹数据表
-        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS fire_db(_id integer primary key autoincrement,"+
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS sc_db(_id integer primary key autoincrement,"+
                 "name text,price float,num integer,img long)");//执行创建数据表的语句
+        //订单表
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS order_db(_id integer primary key autoincrement,oTime text,totalPrice float,onum integer)");
+        //订单详情表
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS orderDetail_db(_id integer primary key autoincrement,oid integer,pid integer,num integer)");
+        //执行创建数据表的语句
     }
 
     @Override
