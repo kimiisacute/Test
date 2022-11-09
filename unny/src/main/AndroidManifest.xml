@@ -11,17 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
-            android:name=".ComfireActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".activity.CartActivity"
+            android:name=".activity.GanjusinfoActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.GanjuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GuasinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GuaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MimaActivity"
             android:exported="false" />
         <activity
             android:name=".activity.UnnzActivity"

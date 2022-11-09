@@ -34,6 +34,8 @@ import java.util.Map;
  */
 public class WoDeFragment extends Fragment {
 
+    public static int RESULT_CODE = 1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,6 +43,11 @@ public class WoDeFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_wo_de, container, false);
         //从视图中获得了控件
         ImageView myTitle=view.findViewById(R.id.iv_title);
+        //初始化用户信息
+        TextView set_gender = view.findViewById(R.id.tv_login);
+        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("lg_name", Context.MODE_PRIVATE);
+        String getStringGender = sharedPreferences.getString("name",null);
+        set_gender.setText(getStringGender);
         //调用shared preference
        // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         TextView myName=view.findViewById(R.id.tv_login);
@@ -55,22 +62,15 @@ public class WoDeFragment extends Fragment {
             }
         });
         //判断当前用户的状态，如果有用户信息，就自动登录，显示用户头像和姓名；
-        myName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView set_gender = view.findViewById(R.id.tv_login);
-                SharedPreferences sharedPreferences=getActivity().getSharedPreferences("lg_name", Context.MODE_PRIVATE);
-                String getStringGender = sharedPreferences.getString("name",null);
-                set_gender.setText(getStringGender);
-            }
-        });
         //如果没有用户信息，即显示请登录。
         //跳转到登录页面
         myTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
+                getActivity().setResult(0, intent);
+
+                getActivity().finish();
             }
         });
 
