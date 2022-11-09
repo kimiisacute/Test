@@ -12,8 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.unny.R;
 import com.example.unny.activity.GanjuActivity;
-import com.example.unny.activity.GrzxActivity;
 import com.example.unny.activity.GuaActivity;
+import com.example.unny.activity.HeguoActivity;
+import com.example.unny.activity.JiangguoActivity;
 
 /**
  * 分类
@@ -85,45 +86,47 @@ public class FenLeiFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //浆果类
         iv_putao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), JiangguoActivity.class);
                 startActivity(intent);
             }
         });
         iv_ci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), JiangguoActivity.class);
                 startActivity(intent);
             }
         });
         iv_mihoutao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), JiangguoActivity.class);
                 startActivity(intent);
             }
         });
+        //核果类
         iv_lizi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), HeguoActivity.class);
                 startActivity(intent);
             }
         });
         iv_taozi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), HeguoActivity.class);
                 startActivity(intent);
             }
         });
         iv_xingzi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), HeguoActivity.class);
                 startActivity(intent);
             }
         });
@@ -144,14 +147,14 @@ public class FenLeiFragment extends Fragment {
         tv_tv3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), JiangguoActivity.class);
                 startActivity(intent);
             }
         });
         tv_tv4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                Intent intent=new Intent(getActivity(), HeguoActivity.class);
                 startActivity(intent);
             }
         });
