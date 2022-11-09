@@ -8,15 +8,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.unny.R;
+import com.example.unny.entity.Goods;
+import com.example.unny.util.CartDBService;
 
 public class GoodsinfoActivity extends AppCompatActivity {
-    String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗李子","海沃德猕猴桃","红富士苹果","蓬莱柿无花果"};
+    String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗甜李子","海沃德猕猴桃","红富士大苹果","蓬莱柿无花果"};
     int images[]={R.drawable.caomei4,R.drawable.lanm1,R.drawable.lizi1,R.drawable.miht1,R.drawable.pingg1,R.drawable.wuhg1};
     int images1[]={R.drawable.caomei3,R.drawable.lanm3,R.drawable.lizi3,R.drawable.miht3,R.drawable.pingg1,R.drawable.wuhg3};
     int images2[]={R.drawable.caomei4,R.drawable.lanm1,R.drawable.lizi1,R.drawable.miht1,R.drawable.pingg1,R.drawable.wuhg1};
-    String price[]={"￥18.8","￥20.8","￥3.8","￥4.5","￥2.58","￥8.89"};
+    String price[]={"￥18.8","￥20.8","￥13.8","￥14.5","￥12.5","￥18.9"};
     String xq[]={"新鲜现摘佐贺清香草莓 整箱包邮到家 好吃还不贵","新鲜现摘芭尔德温蓝莓 整箱包邮到家 好吃还不贵",
             "新鲜现摘黑布朗李子 整箱包邮到家 好吃还不贵","新鲜现摘海沃德猕猴桃 整箱包邮到家 好吃还不贵",
             "新鲜现摘红富士苹果 整箱包邮到家 好吃还不贵","新鲜现摘蓬莱柿无花果 整箱包邮到家 好吃还不贵"};
@@ -42,6 +45,7 @@ public class GoodsinfoActivity extends AppCompatActivity {
         TextView a_bm=findViewById(R.id.a_bm);
         TextView a_sjs=findViewById(R.id.a_sjs);
         ImageView tv_fh=findViewById(R.id.tv_fh);
+        TextView tv_jgwc=findViewById(R.id.tv_jgwc);
         //将数据添加到控件
         iv_caomei4.setImageResource(images[i]);
         iv_caomei3.setImageResource(images1[i]);
@@ -54,8 +58,26 @@ public class GoodsinfoActivity extends AppCompatActivity {
 
         tv_fh.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void  onClick(View v){
+            public void  onClick(View v) {
+
                 finish();
+            }
+        });
+        //加入购物车
+        tv_jgwc.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View view){
+                //获取页面数据
+                Goods good=new Goods();
+                good.setName(names[i]);
+                String s=price[i].substring(1);
+                good.setPrice(Float.parseFloat(s));
+                good.setNum(1);//购买的数量
+                good.setImg(images[i]);
+                //将数据存入数据库
+                CartDBService cartDBService=new CartDBService(GoodsinfoActivity.this);
+                cartDBService.addCart(good);
+                Toast.makeText(GoodsinfoActivity.this,"商品已添加",Toast.LENGTH_SHORT).show();
             }
         });
     }
