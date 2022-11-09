@@ -26,6 +26,7 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
     ImageView wo_xy4;
     ImageView wo_xy6;
     TextView wo_tcdl;
+    TextView tv_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
         wo_xy4=findViewById(R.id.wo_xy4);
         wo_xy6=findViewById(R.id.wo_xy6);
         wo_tcdl=findViewById(R.id.wo_tcdl);
+        tv_login=findViewById(R.id.tv_login);
 
         wo_xy2.setOnCheckedChangeListener(this);
         //返回上一页面

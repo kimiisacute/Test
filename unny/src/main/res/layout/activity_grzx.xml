@@ -42,9 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_login"
-        android:text="点击登录"
+        android:text="欢迎来到Unny好果滋"
+        android:textSize="20dp"
+        android:textColor="#FFC68F"
         android:layout_toRightOf="@id/iv_title"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="110dp"
         android:layout_centerHorizontal="true"/>
     <RelativeLayout

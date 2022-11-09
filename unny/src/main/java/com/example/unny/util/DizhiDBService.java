@@ -2,6 +2,7 @@ package com.example.unny.util;
 
 import android.content.ContentValues;
 import android.content.Context;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -14,7 +15,7 @@ import java.util.List;
 地址的增删改查
  */
 public class DizhiDBService {
-    public static final String TABLE_NAME="dizhi.db";
+    public static final String TABLE_NAME="diz_db";
     private DBOpenHelper dbOpenHelper;
     public DizhiDBService(Context context){
         dbOpenHelper=new DBOpenHelper(context);
@@ -40,7 +41,7 @@ public class DizhiDBService {
         //打开数据库
         SQLiteDatabase sqLiteDatabase=dbOpenHelper.getWritableDatabase();
         Cursor cursor=sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
-        List<Tjdz> tjdzsItems=new ArrayList<Tjdz>();
+        List<Tjdz> tjdzItems=new ArrayList<Tjdz>();
         while (cursor.moveToNext()){
             Tjdz tjdz=new Tjdz();
             tjdz.setId(cursor.getInt(0));
@@ -48,8 +49,8 @@ public class DizhiDBService {
             tjdz.setPhone(cursor.getString(2));
             tjdz.setDizi(cursor.getString(3));
             tjdz.setXdizi(cursor.getString(4));
-            tjdzsItems.add(tjdz);
+            tjdzItems.add(tjdz);
         }
-        return tjdzsItems;
+        return tjdzItems;
     }
 }
