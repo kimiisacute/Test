@@ -81,6 +81,12 @@
             android:name=".activity.ShouhdzActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.XgdizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TjdzhiActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.SlapshActivity"
             android:exported="true">
             <intent-filter>

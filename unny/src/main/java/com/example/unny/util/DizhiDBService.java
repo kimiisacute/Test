@@ -5,6 +5,7 @@ import android.content.Context;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.unny.activity.entity.Tjdz;
 
@@ -53,4 +54,31 @@ public class DizhiDBService {
         }
         return tjdzItems;
     }
+    //修改地址
+    public void upddate(Tjdz tjdz){
+        //打开数据库
+        SQLiteDatabase sqLiteDatabase=dbOpenHelper.getWritableDatabase();
+        //把对象封装成键值对
+        ContentValues values=new ContentValues();
+        //建为表里的列的名字
+        values.put("renm",tjdz.getRenm());
+        values.put("phone",tjdz.getPhone());
+        values.put("dizi",tjdz.getDizi());
+        values.put("xdizi",tjdz.getXdizi());
+        int a=sqLiteDatabase.update("diz_db",values,"_id=?",new String[]{tjdz.getId()+""});
+        Log.v("","a="+a);
+        Log.v("","id="+tjdz.getId());
+        //关闭数据库
+        sqLiteDatabase.close();
+    }
+    //删除
+    /*
+    public void delete(Tjdz tjdz){
+        //打开数据库
+        SQLiteDatabase sqLiteDatabase=dbOpenHelper.getWritableDatabase();
+        int a1 = sqLiteDatabase.delete("diz_db", "_id=?", new String[]{tjdz.getId()+""});
+        sqLiteDatabase.close();
+
+    }
+     */
 }
