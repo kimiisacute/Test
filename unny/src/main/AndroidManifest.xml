@@ -11,6 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".activity.HeguosinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HeguoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.JiangguosinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.JiangguoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ComfireActivity"
             android:exported="false">
             <meta-data
@@ -74,9 +86,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
