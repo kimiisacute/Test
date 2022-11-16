@@ -90,6 +90,9 @@
             android:name=".activity.TjdzhiActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.MimaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.SlapshActivity"
             android:exported="true">
             <intent-filter>

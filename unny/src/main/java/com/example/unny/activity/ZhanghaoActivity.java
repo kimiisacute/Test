@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.example.unny.R;
 
@@ -15,20 +16,24 @@ public class ZhanghaoActivity extends AppCompatActivity implements CompoundButto
     private Switch zh_xy2;
     private Switch zh_xy3;
     private Switch zh_xy4;
-    ImageView zh_xy;
+    TextView zh_zxzh;
     ImageView zh_xy1;
     ImageView iv_fh;
+    public static ZhanghaoActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zhanghao);
+        instance = this;
+        init();
+
 
         zh_xy2=(Switch) findViewById(R.id.zh_xy2);
         zh_xy3=(Switch) findViewById(R.id.zh_xy3);
         zh_xy4=(Switch) findViewById(R.id.zh_xy4);
         iv_fh=findViewById(R.id.iv_fh);
-        zh_xy=findViewById(R.id.zh_xy);
+        zh_zxzh=findViewById(R.id.zh_zxzh);
         zh_xy1=findViewById(R.id.zh_xy1);
 
         zh_xy2.setOnCheckedChangeListener(this);
@@ -42,14 +47,6 @@ public class ZhanghaoActivity extends AppCompatActivity implements CompoundButto
                 finish();
             }
         });
-        //activity跳转activity，帐号
-        zh_xy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1=new Intent(ZhanghaoActivity.this,UnnzActivity.class);
-                startActivityForResult(intent1,1);
-            }
-        });
         //activity跳转activity，密码
         zh_xy1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +55,18 @@ public class ZhanghaoActivity extends AppCompatActivity implements CompoundButto
                 startActivityForResult(intent1,1);
             }
         });
+        //activity跳转activity，密码
+        zh_zxzh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent(ZhanghaoActivity.this,LoginActivity.class);
+                startActivityForResult(intent1,1);
+            }
+        });
 
+    }
+
+    private void init() {
     }
 
     @Override
