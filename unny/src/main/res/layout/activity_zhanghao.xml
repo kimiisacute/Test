@@ -34,31 +34,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/wo1"
-        android:layout_marginTop="50dp"
-        android:id="@+id/zh_d1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/zh_zh"
-            android:text="unny帐号"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/zh_xy"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/zh_zh"
-            android:layout_marginLeft="210dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/zh_d1"
         android:layout_marginTop="5dp"
         android:id="@+id/zh_d2"
         android:layout_marginLeft="10dp"
