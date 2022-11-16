@@ -17,7 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.unny.R;
 import com.example.unny.activity.AddressActivity;
-import com.example.unny.activity.CartActivity;
+import com.example.unny.activity.CarActivity;
 import com.example.unny.activity.GrzxActivity;
 import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
@@ -68,15 +68,13 @@ public class WoDeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), LoginActivity.class);
-                getActivity().setResult(0, intent);
-
-                getActivity().finish();
+                startActivity(intent);
             }
         });
 
         //设置listview
-        String[] names={"待付款","待发货","待收货","待评价","退款/售后"};
-        int[]imgs={R.drawable.daifukuan,R.drawable.daifahuo,R.drawable.daishouhuo,R.drawable.daipingjia,R.drawable.tuikuan};
+        String[] names={"全部订单","待收货","待评价","退款/售后"};
+        int[]imgs={R.drawable.daishouhuo,R.drawable.daifahuo,R.drawable.daipingjia,R.drawable.tuikuan};
         //定义数据
         List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
         for (int i=0;i< names.length;i++){
@@ -99,7 +97,7 @@ public class WoDeFragment extends Fragment {
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1=new Intent(getActivity(), CartActivity.class);
+                        Intent intent1=new Intent(getActivity(), CarActivity.class);
                         startActivity(intent1);
                         break;
                     case 2:
