@@ -49,14 +49,16 @@ public class LoginActivity extends AppCompatActivity {
         lg_name=findViewById(R.id.et_name);
         lg_psw=findViewById(R.id.et_pass);
         btn_login=findViewById(R.id.bu_login);
+
         //登录注册部分数据库
         db=SQLiteDatabase.openOrCreateDatabase(getCacheDir()+"/note",null);
         try {
-            db.execSQL("create table user(username varchar(100),password varchar(100))");
+            db.execSQL("create table user(id int(100),username varchar(100),password varchar(100),zpassword varchar(100))");
         } catch (Exception e){
             e.printStackTrace();
         }
         SharedPreferences sharedPreferences=getSharedPreferences("lg_name",MODE_PRIVATE);//MODE_PRIVATE模式表示访问权限为本应用
+
         lg_name.setText(sharedPreferences.getString("lg_name",""));
         lg_psw.setText(sharedPreferences.getString("lg_psw",""));
         //登录按钮
@@ -152,4 +154,15 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *保存登录状态和登录用户名到SharedPreferences中
+     */
+    private void saveLoginStatus(boolean status,String putStringGender){
+        //loginInfo表示文件名
+        SharedPreferences sp=getSharedPreferences("lg_psw", MODE_PRIVATE);
+        SharedPreferences.Editor editor=sp.edit();//获取编辑器
+        editor.putBoolean("isLogin", status);//存入boolean类型的登录状态
+        editor.putString("loginUserName", putStringGender);//存入登录状态时的用户名
+        editor.commit();//提交修改
+    }
 }
