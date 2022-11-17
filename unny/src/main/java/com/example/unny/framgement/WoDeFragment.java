@@ -23,6 +23,7 @@ import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
+import com.example.unny.activity.QianbaoActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,6 +54,15 @@ public class WoDeFragment extends Fragment {
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
+        ImageView iv_qianbao=view.findViewById(R.id.iv_qianbao);
+        //点击钱包图标
+        iv_qianbao.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(getActivity(), QianbaoActivity.class);
+                startActivity(intent);
+            }
+        });
         //设置点击事件
         iv_shez.setOnClickListener(new View.OnClickListener() {
             @Override

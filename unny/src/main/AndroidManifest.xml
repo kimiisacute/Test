@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".activity.QianbaoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CarActivity"
             android:exported="false" />
         <activity
