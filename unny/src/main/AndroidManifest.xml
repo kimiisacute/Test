@@ -11,6 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
         <activity
+            android:name=".ShoucangActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".OrderSuccessActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activity.ComfireActivity"
             android:exported="false">
             <meta-data

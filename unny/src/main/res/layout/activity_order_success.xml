@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-10dp"
+        android:layout_height="48dp"
+        android:orientation="vertical" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:id="@+id/order_top"
+                android:background="@drawable/bb1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您已下单成功！"
+                android:id="@+id/t1"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本次下单获得52积分"
+                android:id="@+id/t2"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/t1"
+                android:layout_centerHorizontal="true"
+                android:textSize="15dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/fanhui"
+                android:id="@+id/tv_back_order" />
+            <ImageView
+                android:id="@+id/iv_order"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/order_top"
+                android:src="@drawable/caomei" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:id="@+id/t3"
+            android:layout_below="@+id/iv_order">
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bu_orderdetail"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="确认当前订单"
+                    android:background="@drawable/biankuang"/>
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bu_orderlist"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/biankuang"
+                    android:text="查看所有订单"/>
+        </LinearLayout>
+</RelativeLayout>

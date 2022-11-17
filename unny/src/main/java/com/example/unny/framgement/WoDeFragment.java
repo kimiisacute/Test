@@ -1,5 +1,6 @@
 package com.example.unny.framgement;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,6 +24,7 @@ import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
+import com.example.unny.activity.ShoucangActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +37,8 @@ import java.util.Map;
 public class WoDeFragment extends Fragment {
 
     public static int RESULT_CODE = 1;
-
+    ImageView iv_shouchang;
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,11 +56,22 @@ public class WoDeFragment extends Fragment {
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
+        iv_shouchang=view.findViewById(R.id.iv_shouchang);
+
+
         //设置点击事件
         iv_shez.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), GrzxActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        iv_shouchang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ShoucangActivity.class);
                 startActivity(intent);
             }
         });
