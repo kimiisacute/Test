@@ -1,6 +1,7 @@
 package com.example.unny.framgement;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.unny.R;
@@ -55,6 +57,7 @@ public class WoDeFragment extends Fragment {
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
         ImageView iv_qianbao=view.findViewById(R.id.iv_qianbao);
+        TextView tv_lianxi=view.findViewById(R.id.tv_lianxi);
         //点击钱包图标
         iv_qianbao.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -126,6 +129,26 @@ public class WoDeFragment extends Fragment {
                 }
             }
         });
+        tv_lianxi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("联系门店:");
+                builder.setMessage("成都农业科技职业学院(海科校区)"+"\n"+"女寝B320"+"\n"+"联系电话：1518*******");
+                builder.setCancelable(true);
+                builder.setCancelable(true);   //设置按钮是否可以按返回键取消,false则不可以取消
+                builder.setPositiveButton("关闭", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog dialog = builder.create();  //创建对话框
+                dialog.setCanceledOnTouchOutside(true);      //设置弹出框失去焦点是否隐藏,即点击屏蔽其它地方是否隐藏
+                dialog.show();
+            }
+        });
         return view;
     }
+
 }

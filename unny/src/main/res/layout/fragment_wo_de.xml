@@ -163,9 +163,9 @@
         android:textSize="10dp"/>
 
     <TextView
+        android:id="@+id/tv_lianxi"
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:id="@+id/tv_lianxi"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="450dp"
         android:background="@drawable/bb4"
