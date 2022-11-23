@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class CartAdapter extends BaseAdapter {
+public class OrderAdapter extends BaseAdapter {
     private Context context;//上下文
     private List<Goods> items;//数据源
 
@@ -35,7 +35,7 @@ public class CartAdapter extends BaseAdapter {
         this.pichOnMap = pichOnMap;
     }
     //构造方法
-    public CartAdapter(Context context, List<Goods> items) {
+    public OrderAdapter(Context context, List<Goods> items) {
         this.context = context;
         this.items = items;
         pichOnMap = new HashMap<Object, Integer>();
@@ -66,7 +66,7 @@ public class CartAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         //根据子项布局文件获得每一项的视图
-        view = View.inflate(context, R.layout.cart_item, null);
+        view = View.inflate(context, R.layout.order_item, null);
         //实例化控件
         CheckBox rb_items;
         ImageView iv_items;

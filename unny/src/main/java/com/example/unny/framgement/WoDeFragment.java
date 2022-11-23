@@ -26,6 +26,7 @@ import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
 import com.example.unny.activity.QianbaoActivity;
+import com.example.unny.activity.ShoucangActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,11 +53,12 @@ public class WoDeFragment extends Fragment {
         String getStringGender = sharedPreferences.getString("name",null);
         set_gender.setText(getStringGender);
         //调用shared preference
-       // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+        // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
         ImageView iv_qianbao=view.findViewById(R.id.iv_qianbao);
+        ImageView iv_shouchang=view.findViewById(R.id.iv_shouchang);
         TextView tv_lianxi=view.findViewById(R.id.tv_lianxi);
         //点击钱包图标
         iv_qianbao.setOnClickListener(new View.OnClickListener(){
@@ -74,6 +76,14 @@ public class WoDeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        //收藏夹
+        iv_shouchang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ShoucangActivity.class);
+                startActivity(intent);
+            }
+        });
         //判断当前用户的状态，如果有用户信息，就自动登录，显示用户头像和姓名；
         //如果没有用户信息，即显示请登录。
         //跳转到登录页面
@@ -84,6 +94,7 @@ public class WoDeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
 
         //设置listview
         String[] names={"全部订单","待收货","待评价","退款/售后"};

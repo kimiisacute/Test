@@ -94,20 +94,30 @@
                 android:layout_marginRight="10dp"
                 android:id="@+id/ll_wznr"/>
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="￥18.8"
                 android:textColor="#e82222"
                 android:textSize="25dp"
                 android:layout_marginLeft="20dp"
                 android:id="@+id/iv_dj"
-                android:layout_below="@+id/ll_wznr"/>
-
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/iv_ganju"/>
+            <Button
+                android:id="@+id/tv_shoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_ganju"
+                android:layout_marginTop="10dp"
+                android:layout_alignRight="@+id/iv_ganju"
+                android:layout_marginRight="5dp"
+                android:text="加入收藏夹" />
             <TextView
                 android:id="@+id/iv_jj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_dj"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
                 android:text="新鲜现摘8424麒麟西瓜 整箱包邮到家 好吃还不贵"
                 android:textSize="18dp" />
