@@ -14,19 +14,16 @@ public class DBOpenHelp extends SQLiteOpenHelper {
     public DBOpenHelp(@Nullable Context context) {
         super(context, DB_NAME, null, 1);
     }
-
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //创建购物车数据表
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS cart_db(_id integer primary key autoincrement,"+
                 "name text,price float,num integer,img long)");//执行创建数据表的语句
         //创建收藏夹数据表
-        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS sc_db(_id integer primary key autoincrement,"+
-                "name text,price float,num integer,img long)");//执行创建数据表的语句
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS shoucang_db(_id integer primary key autoincrement,"+
+                "name text,price float,img long)");//执行创建数据表的语句
         //订单表
-        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS order_db(_id integer primary key autoincrement,oTime text,totalPrice float,onum integer)");
-        //订单详情表
-        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS orderDetail_db(_id integer primary key autoincrement,oid integer,name text,img int,price float,num integer)");
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS order_db(_id integer primary key autoincrement,totalPrice float,num integeroid,oid integer,name text,img integer,price float)");
         //执行创建数据表的语句
     }
 

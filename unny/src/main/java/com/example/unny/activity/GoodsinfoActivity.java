@@ -2,10 +2,12 @@ package com.example.unny.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +15,10 @@ import android.widget.Toast;
 import com.example.unny.R;
 import com.example.unny.entity.Goods;
 import com.example.unny.util.CartDBService;
+import com.example.unny.util.OrderDBService;
+import com.example.unny.util.ShoucangDBService;
+
+import java.util.ArrayList;
 
 public class GoodsinfoActivity extends AppCompatActivity {
     String names[]={"佐贺清香草莓","芭尔德温蓝莓","黑布朗甜李子","海沃德猕猴桃","红富士大苹果","蓬莱柿无花果"};
@@ -46,6 +52,8 @@ public class GoodsinfoActivity extends AppCompatActivity {
         TextView a_sjs=findViewById(R.id.a_sjs);
         ImageView tv_fh=findViewById(R.id.tv_fh);
         TextView tv_jgwc=findViewById(R.id.tv_jgwc);
+        TextView tv_buy=findViewById(R.id.tv_buy);
+        Button tv_shoucang=findViewById(R.id.tv_shoucang);
         //将数据添加到控件
         iv_caomei4.setImageResource(images[i]);
         iv_caomei3.setImageResource(images1[i]);
@@ -78,6 +86,39 @@ public class GoodsinfoActivity extends AppCompatActivity {
                 CartDBService cartDBService=new CartDBService(GoodsinfoActivity.this);
                 cartDBService.addCart(good);
                 Toast.makeText(GoodsinfoActivity.this,"商品已添加",Toast.LENGTH_SHORT).show();
+            }
+        });
+        //加入收藏夹
+        tv_shoucang.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View view){
+                //获取页面数据
+                Goods good=new Goods();
+                good.setName(names[i]);
+                String s=price[i].substring(1);
+                good.setPrice(Float.parseFloat(s));
+                good.setImg(images[i]);
+                //将数据存入数据库
+                ShoucangDBService shoucangDBService=new ShoucangDBService(GoodsinfoActivity.this);
+                shoucangDBService.addShoucang(good);
+                Toast.makeText(GoodsinfoActivity.this,"商品已收藏",Toast.LENGTH_SHORT).show();
+            }
+        });
+        //立即购买
+        tv_buy.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void  onClick(View view){
+                //获取页面数据
+                Goods good=new Goods();
+                good.setName(names[i]);
+                String s=price[i].substring(1);
+                good.setPrice(Float.parseFloat(s));
+                good.setNum(1);//购买的数量
+                good.setImg(images[i]);
+                //将数据存入数据库
+                OrderDBService orderDBService=new OrderDBService(GoodsinfoActivity.this);
+                orderDBService.addOrder(good);
+                Toast.makeText(GoodsinfoActivity.this,"商品已购买",Toast.LENGTH_SHORT).show();
             }
         });
     }
