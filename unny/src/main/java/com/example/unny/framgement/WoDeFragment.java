@@ -1,7 +1,7 @@
 package com.example.unny.framgement;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,16 +14,18 @@ import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.unny.R;
 import com.example.unny.activity.AddressActivity;
-import com.example.unny.activity.CartActivity;
+import com.example.unny.activity.CarActivity;
 import com.example.unny.activity.GrzxActivity;
 import com.example.unny.activity.LoginActivity;
 import com.example.unny.activity.MyinfoActivity;
 import com.example.unny.activity.OrderActivity;
 import com.example.unny.activity.OutActivity;
+import com.example.unny.activity.QianbaoActivity;
 import com.example.unny.activity.ShoucangActivity;
 
 import java.util.ArrayList;
@@ -37,6 +39,7 @@ import java.util.Map;
 public class WoDeFragment extends Fragment {
 
     public static int RESULT_CODE = 1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -50,13 +53,21 @@ public class WoDeFragment extends Fragment {
         String getStringGender = sharedPreferences.getString("name",null);
         set_gender.setText(getStringGender);
         //调用shared preference
-       // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+        // SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         TextView myName=view.findViewById(R.id.tv_login);
         GridView myList=view.findViewById(R.id.mylist);
         ImageView iv_shez=view.findViewById(R.id.iv_shez);
+        ImageView iv_qianbao=view.findViewById(R.id.iv_qianbao);
         ImageView iv_shouchang=view.findViewById(R.id.iv_shouchang);
-
-
+        TextView tv_lianxi=view.findViewById(R.id.tv_lianxi);
+        //点击钱包图标
+        iv_qianbao.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(getActivity(), QianbaoActivity.class);
+                startActivity(intent);
+            }
+        });
         //设置点击事件
         iv_shez.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,15 +91,14 @@ public class WoDeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), LoginActivity.class);
-                getActivity().setResult(0, intent);
-
-                getActivity().finish();
+                startActivity(intent);
             }
         });
 
+
         //设置listview
-        String[] names={"待付款","待发货","待收货","待评价","退款/售后"};
-        int[]imgs={R.drawable.daifukuan,R.drawable.daifahuo,R.drawable.daishouhuo,R.drawable.daipingjia,R.drawable.tuikuan};
+        String[] names={"全部订单","待收货","待评价","退款/售后"};
+        int[]imgs={R.drawable.daishouhuo,R.drawable.daifahuo,R.drawable.daipingjia,R.drawable.tuikuan};
         //定义数据
         List<Map<String,Object>> data=new ArrayList<Map<String,Object>>();
         for (int i=0;i< names.length;i++){
@@ -111,7 +121,7 @@ public class WoDeFragment extends Fragment {
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1=new Intent(getActivity(), CartActivity.class);
+                        Intent intent1=new Intent(getActivity(), CarActivity.class);
                         startActivity(intent1);
                         break;
                     case 2:
@@ -130,6 +140,26 @@ public class WoDeFragment extends Fragment {
                 }
             }
         });
+        tv_lianxi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("联系门店:");
+                builder.setMessage("成都农业科技职业学院(海科校区)"+"\n"+"女寝B320"+"\n"+"联系电话：1518*******");
+                builder.setCancelable(true);
+                builder.setCancelable(true);   //设置按钮是否可以按返回键取消,false则不可以取消
+                builder.setPositiveButton("关闭", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog dialog = builder.create();  //创建对话框
+                dialog.setCanceledOnTouchOutside(true);      //设置弹出框失去焦点是否隐藏,即点击屏蔽其它地方是否隐藏
+                dialog.show();
+            }
+        });
         return view;
     }
+
 }

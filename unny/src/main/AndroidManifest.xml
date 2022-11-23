@@ -20,6 +20,24 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".activity.QianbaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HeguosinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HeguoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.JiangguosinfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.JiangguoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.OrderSuccessActivity"
             android:exported="false">
             <meta-data
