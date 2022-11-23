@@ -3,23 +3,22 @@ package com.example.unny.util;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.example.unny.activity.entity.Mima;
 
-/*
-密码的修改
- */
 public class MimaService {
     public static final String TABLE_NAME="user";
-    private DBOpenhelpers dbOpenhelpers;
+    private static SQLiteOpenHelper dbOpenHelpers;
     public MimaService(Context context){
-        dbOpenhelpers=new DBOpenhelpers(context);
+        dbOpenHelpers=new DBOpenhelpers(context);
     }
-    //修改密码
-    public void upddate(Mima mima){
+
+    //修改地址
+    public static void upddate(Mima mima){
         //打开数据库
-        SQLiteDatabase sqLiteDatabase=dbOpenhelpers.getWritableDatabase();
+        SQLiteDatabase sqLiteDatabase=dbOpenHelpers.getWritableDatabase();
         //把对象封装成键值对
         ContentValues values=new ContentValues();
         //建为表里的列的名字
@@ -31,7 +30,4 @@ public class MimaService {
         //关闭数据库
         sqLiteDatabase.close();
     }
-
-    
-    
 }

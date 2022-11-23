@@ -41,6 +41,9 @@
             android:name=".activity.JiangguoActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.MimaActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.OrderSuccessActivity"
             android:exported="false">
             <meta-data

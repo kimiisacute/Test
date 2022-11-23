@@ -3,7 +3,6 @@ package com.example.unny.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -29,50 +28,34 @@ public class MimaActivity extends AppCompatActivity{
     private EditText mm_ku2;//再次输入新密码
     private Button qrj;//确认
     private String originalPsw, newPsw, newPswAgain;
-    private String   putStringGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mima);
-        //设置此界面为竖屏
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        init();
-        putStringGender = AnalysisUtils.readLoginUserName(this);
 
+        xz_ku = findViewById(R.id.xz_ku);
+        mm_ku1 = findViewById(R.id.mm_ku1);
+        mm_ku2 = findViewById(R.id.mm_ku2);
+        qrj = findViewById(R.id.qrj);
         Intent intent=getIntent();
+        int id1=intent.getIntExtra("id",0);
         xz_ku.setText(intent.getStringExtra("password"));
         mm_ku1.setText(intent.getStringExtra("zpassword"));
         mm_ku2.setText(intent.getStringExtra("zcpassword"));
 
         iv_fh=findViewById(R.id.iv_fh);
-
         tv_login=findViewById(R.id.tv_login);
-
-
-
-        //返回上一页面
-        iv_fh.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void  onClick(View v){
-                finish();
-            }
-        });
-    }
-
-    private void init() {
-        xz_ku = (EditText) findViewById(R.id.xz_ku);
-        mm_ku1 = (EditText) findViewById(R.id.mm_ku1);
-        mm_ku2 = (EditText) findViewById(R.id.mm_ku2);
-        qrj = (Button) findViewById(R.id.qrj);
-
-        Intent intent=getIntent();
-        String id1=intent.getStringExtra("id");
 
         qrj.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
+
+                Mima mima = new Mima();
+                mima.setId(id1);
+                mima.setPassword(xz_ku.getText().toString());
+
                 getEditString();
                 if (TextUtils.isEmpty(originalPsw)) {
                     Toast.makeText(MimaActivity.this, "请输入原始密码", Toast.LENGTH_SHORT).show();
@@ -94,36 +77,34 @@ public class MimaActivity extends AppCompatActivity{
                     return;
                 } else {
 
-                    //修改密码
-                    Mima mima=new Mima();
-                    mima.setId(id1);
+
+                    //将数据存入SQLite数据表
                     mima.setPassword(newPsw);
-                    modifyPsw(mima);
+                    MimaService mimaService = new MimaService(MimaActivity.this);
+                    mimaService.upddate(mima);
                     Toast.makeText(MimaActivity.this, "新密码设置成功", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MimaActivity.this, LoginActivity.class);
                     startActivity(intent);
                     ZhanghaoActivity.instance.finish();//关闭设置页
                     MimaActivity.this.finish();//关闭当前页面
-
                 }
+
             }
 
-            /**
-             * 修改密码
-             */
-            private void modifyPsw(Mima mima) {
-                MimaService mimaService=new MimaService(MimaActivity.this);
-                mimaService.upddate(mima);
-            }
-            /**
-             * 获取控件上的字符串
-             */
             private void getEditString() {
                 originalPsw = xz_ku.getText().toString().trim();
                 newPsw = mm_ku1.getText().toString().trim();
                 newPswAgain = mm_ku2.getText().toString().trim();
+
             }
         });
+            //返回上一页面
+        iv_fh.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void  onClick(View v){
+                    finish();
+                }
+            });
     }
 
 }

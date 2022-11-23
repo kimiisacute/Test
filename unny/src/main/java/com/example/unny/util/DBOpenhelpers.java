@@ -6,22 +6,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-/*
-操纵SQLlite数据库基础类
- */
 public class DBOpenhelpers extends SQLiteOpenHelper {
     private static final String DB_NAME="db";
-    public DBOpenhelpers(@Nullable Context context){
+    public DBOpenhelpers(@Nullable Context context) {
         super(context, DB_NAME, null, 1);
     }
+
     //初始化数据库
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //创建数据表
-        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(_id int primary key autoincrement,"+
-                "username text ,password text)");
+        sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS user(_id integer primary key autoincrement,"+
+                "username text,password text)");
         //可继续建表
-
     }
 
     @Override

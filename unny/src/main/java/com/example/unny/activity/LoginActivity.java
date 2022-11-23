@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         //登录注册部分数据库
         db=SQLiteDatabase.openOrCreateDatabase(getCacheDir()+"/note",null);
         try {
-            db.execSQL("create table if not exists user(id int (100),username varchar(100),password varchar(100),zpassword varchar(100),zpassword varchar(100))");
+            db.execSQL("create table if not exists user(username varchar(100),password varchar(100))");
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -87,8 +87,6 @@ public class LoginActivity extends AppCompatActivity {
             }else {
                 Toast.makeText(LoginActivity.this, "账号不存在", Toast.LENGTH_SHORT).show();
             }
-
-
         });
 
         //注册部分
@@ -103,6 +101,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // 绑定控件，同时设置登录按钮的监听事件，实现点击按钮时，获取用户名和密码的字符串，
+    // 同时使用spHelper类实例化的对象sh，存储用户名和密码到本地文件中
     private void bindView() {
         etPassword = findViewById(R.id.et_pass);
         etUsername = findViewById(R.id.et_name);
@@ -140,8 +140,8 @@ public class LoginActivity extends AppCompatActivity {
         Map<String, String> data = sh.read();
         isRemember = data.get("isRemember");
         if(isRemember.equals("YES")){
-            lg_name.setText(data.get("username"));
-            lg_psw.setText(data.get("password"));
+            etUsername.setText(data.get("username"));
+            etPassword.setText(data.get("password"));
             cbRemember.setChecked(true);
         }
     }
@@ -158,17 +158,5 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         }
-    }
-
-    /**
-     *保存登录状态和登录用户名到SharedPreferences中
-     */
-    private void saveLoginStatus(boolean status,String putStringGender){
-        //loginInfo表示文件名
-        SharedPreferences sp=getSharedPreferences("lg_psw", MODE_PRIVATE);
-        SharedPreferences.Editor editor=sp.edit();//获取编辑器
-        editor.putBoolean("isLogin", status);//存入boolean类型的登录状态
-        editor.putString("loginUserName", putStringGender);//存入登录状态时的用户名
-        editor.commit();//提交修改
     }
 }
