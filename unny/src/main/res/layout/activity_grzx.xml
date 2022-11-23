@@ -42,9 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_login"
-        android:text="点击登录"
+        android:text="欢迎来到Unny好果滋"
+        android:textSize="20dp"
+        android:textColor="#FFC68F"
         android:layout_toRightOf="@id/iv_title"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="110dp"
         android:layout_centerHorizontal="true"/>
     <RelativeLayout
@@ -117,7 +119,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wo_xy2"
-            android:src="@drawable/xiay"
             android:layout_toRightOf="@+id/wo_xxtz"
             android:layout_marginLeft="205dp"
             android:track="@drawable/switch_btn"
@@ -178,31 +179,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/wo_d5"
-        android:id="@+id/wo_d6"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/wobk">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/wo_bzfk"
-            android:text="帮助与反馈"
-            android:textSize="18dp"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/wo_xy5"
-            android:src="@drawable/xiay"
-            android:layout_toRightOf="@+id/wo_bzfk"
-            android:layout_marginLeft="197dp"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/wo_d6"
         android:id="@+id/wo_d7"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
