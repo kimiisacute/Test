@@ -8,6 +8,15 @@ public class Goods implements Serializable {
     private float Price;
     private int num;
     private int img;
+    public boolean isno;
+
+    public Goods(String s, boolean isno) {
+        this.isno = isno;
+    }
+
+    public Goods() {
+
+    }
 
     public int getId() {
         return id;

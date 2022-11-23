@@ -17,48 +17,41 @@ import com.example.unny.adapter.CartAdapter;
 import com.example.unny.adapter.ShoucangAdapter;
 import com.example.unny.entity.Goods;
 import com.example.unny.util.CartDBService;
+import com.example.unny.util.ShoucangDBService;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class CartActivity extends AppCompatActivity implements CartAdapter.RefreshPriceInterface{
-    ListView list_cart;
+public class ShoucangActivity extends AppCompatActivity{
+    ListView list_shoucang;
     CheckBox rb_all,rb_items;
-    TextView tv_acount,tv_count,tv_cleanAll;
+    TextView tv_cleanAll;
     ImageView tv_back;
     List<Goods> items;
-
-    //申明两个变量
-    private float totalCount,totalPrice;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.activity_shoucang);
 
 
-        list_cart = findViewById(R.id.list_cart);
+        list_shoucang= findViewById(R.id.list_shoucang);
         rb_all = findViewById(R.id.rb_all);
-        tv_acount = findViewById(R.id.tv_acount);
         tv_back = findViewById(R.id.tv_back);
-        tv_count = findViewById(R.id.tv_count);
         tv_cleanAll = findViewById(R.id.tv_cleanAll);
         rb_items = findViewById(R.id.rb_items);
 
 
         //查询数据库
-        CartDBService cartDBService = new CartDBService(this);
-        items = cartDBService.getAllCart();
+        ShoucangDBService shoucangDBService = new ShoucangDBService(this);
+        items = shoucangDBService.getAllShoucang();
 
         //实例化适配器
-        CartAdapter cartAdapter = new CartAdapter(this, items);
-        list_cart.setAdapter(cartAdapter);
-
-        //制定当前类为接口的实现类
-        cartAdapter.setRefreshPriceInterface(this);
+        ShoucangAdapter shoucangAdapter = new ShoucangAdapter(this, items);
+        list_shoucang.setAdapter(shoucangAdapter);
 
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +64,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.Refre
         rb_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<Object, Integer> map = cartAdapter.getPichOnMap();
+                HashMap<Object, Integer> map = shoucangAdapter.getPichOnMap();
                 boolean isCheck = false;
                 boolean isUnCheck = false;
                 Iterator iterator = map.entrySet().iterator();
@@ -96,52 +89,9 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.Refre
                     }
                     rb_all.setChecked(true);
                 }
-                priceControl(map);
-                cartAdapter.setPichOnMap(map);
-                cartAdapter.notifyDataSetChanged();
-            }
-        });
-        //实现结算
-        tv_count.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (totalCount <= 0) {
-                    Toast.makeText(CartActivity.this, "请选择需要付款的商品", Toast.LENGTH_LONG).show();
-                } else {
-                    Intent intent = new Intent(CartActivity.this, ComfireActivity.class);
-                    //被选中的项目
-                    HashMap<Object, Integer> map = cartAdapter.getPichOnMap();
-                    //int id[]=new int[items.size()];
-                    int a = 0;
-                    for (int i = 0; i < items.size(); i++) {
-                        if (map.get(items.get(i).getId()) == 1) {
-                            intent.putExtra(a + "", items.get(i));
-                            //id[a]=i;
-                            a++;
-                        }
-                    }
-                    intent.putExtra("id", a);
-                    startActivity(intent);
-                }
+                shoucangAdapter.setPichOnMap(map);
+                shoucangAdapter.notifyDataSetChanged();
             }
         });
     }
-
-    @Override
-    public void refreshPrice(HashMap<Object, Integer> pitchOnMap) {
-        priceControl(pitchOnMap);
-    }
-    public void priceControl(HashMap<Object, Integer> pitchOnMap) {
-        //控制总价的显示
-        totalCount=0;
-        totalPrice=0;
-        for (int i=0;i<items.size();i++){
-            if(pitchOnMap.get(items.get(i).getId())==1){
-                totalPrice=totalPrice+items.get(i).getPrice()*items.get(i).getNum();
-                totalCount=totalCount+totalPrice;
-            }
-        }
-        tv_acount.setText(totalCount+"");
-    }
-
 }
