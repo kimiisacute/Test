@@ -82,13 +82,5 @@ public class GoodsinfoActivity extends AppCompatActivity {
                 Toast.makeText(GoodsinfoActivity.this,"商品已添加",Toast.LENGTH_SHORT).show();
             }
         });
-        tv_buy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(GoodsinfoActivity.this,TjdzhiActivity.class);
-                startActivity(intent);
-
-            }
-        });
     }
 }
