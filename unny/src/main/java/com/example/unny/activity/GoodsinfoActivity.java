@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.unny.R;
 import com.example.unny.entity.Goods;
+import com.example.unny.framgement.HomeFragment;
 import com.example.unny.util.CartDBService;
 
 public class GoodsinfoActivity extends AppCompatActivity {
@@ -46,6 +47,7 @@ public class GoodsinfoActivity extends AppCompatActivity {
         TextView a_sjs=findViewById(R.id.a_sjs);
         ImageView tv_fh=findViewById(R.id.tv_fh);
         TextView tv_jgwc=findViewById(R.id.tv_jgwc);
+        TextView tv_buy=findViewById(R.id.tv_buy);
         //将数据添加到控件
         iv_caomei4.setImageResource(images[i]);
         iv_caomei3.setImageResource(images1[i]);
@@ -78,6 +80,14 @@ public class GoodsinfoActivity extends AppCompatActivity {
                 CartDBService cartDBService=new CartDBService(GoodsinfoActivity.this);
                 cartDBService.addCart(good);
                 Toast.makeText(GoodsinfoActivity.this,"商品已添加",Toast.LENGTH_SHORT).show();
+            }
+        });
+        tv_buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(GoodsinfoActivity.this,TjdzhiActivity.class);
+                startActivity(intent);
+
             }
         });
     }

@@ -23,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         db= SQLiteDatabase.openOrCreateDatabase(getCacheDir()+"/note",null);
         rg_psw=findViewById(R.id.et_pass);
         rg_name=findViewById(R.id.et_name);

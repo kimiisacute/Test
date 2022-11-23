@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.unny.R;
+import com.example.unny.activity.entity.Mima;
 import com.example.unny.tool.spHelper;
 
 import java.util.Map;
@@ -49,14 +50,16 @@ public class LoginActivity extends AppCompatActivity {
         lg_name=findViewById(R.id.et_name);
         lg_psw=findViewById(R.id.et_pass);
         btn_login=findViewById(R.id.bu_login);
+        cbRemember=findViewById(R.id.cb_Remember);
 
         //登录注册部分数据库
         db=SQLiteDatabase.openOrCreateDatabase(getCacheDir()+"/note",null);
         try {
-            db.execSQL("create table user(id int(100),username varchar(100),password varchar(100),zpassword varchar(100))");
+            db.execSQL("create table if not exists user(id int (100),username varchar(100),password varchar(100),zpassword varchar(100),zpassword varchar(100))");
         } catch (Exception e){
             e.printStackTrace();
         }
+
         SharedPreferences sharedPreferences=getSharedPreferences("lg_name",MODE_PRIVATE);//MODE_PRIVATE模式表示访问权限为本应用
 
         lg_name.setText(sharedPreferences.getString("lg_name",""));
@@ -84,7 +87,10 @@ public class LoginActivity extends AppCompatActivity {
             }else {
                 Toast.makeText(LoginActivity.this, "账号不存在", Toast.LENGTH_SHORT).show();
             }
+
+
         });
+
         //注册部分
         tv_zc=findViewById(R.id.tv_zc);
         tv_zc.setOnClickListener(new View.OnClickListener() {
@@ -96,8 +102,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    // 绑定控件，同时设置登录按钮的监听事件，实现点击按钮时，获取用户名和密码的字符串，
-    // 同时使用spHelper类实例化的对象sh，存储用户名和密码到本地文件中
+
     private void bindView() {
         etPassword = findViewById(R.id.et_pass);
         etUsername = findViewById(R.id.et_name);
@@ -125,6 +130,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
     // 登录界面的Activity创建或者从后台重新回到前台时调用onStart()方法
     // 我们在此方法中读取sp文件中的“键”为isRemember的值，来确定之前用户是否勾选记住用户名和密码
     // 若之前已勾选（即isRemember的值为YES）, 在读取sp文件中的用户名和密码，获取后后，setText在文本框中
@@ -134,8 +140,8 @@ public class LoginActivity extends AppCompatActivity {
         Map<String, String> data = sh.read();
         isRemember = data.get("isRemember");
         if(isRemember.equals("YES")){
-            etUsername.setText(data.get("username"));
-            etPassword.setText(data.get("password"));
+            lg_name.setText(data.get("username"));
+            lg_psw.setText(data.get("password"));
             cbRemember.setChecked(true);
         }
     }

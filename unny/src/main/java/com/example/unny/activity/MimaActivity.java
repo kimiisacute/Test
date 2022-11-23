@@ -3,7 +3,6 @@ package com.example.unny.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,9 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.unny.R;
+import com.example.unny.activity.entity.Mima;
+import com.example.unny.util.MimaService;
 
 
 /*
@@ -21,8 +23,7 @@ import com.example.unny.R;
  */
 public class MimaActivity extends AppCompatActivity{
     ImageView iv_fh;
-    private EditText et_name;
-    private EditText et_pass;
+    TextView tv_login;//Alice
     private EditText xz_ku;//原密码
     private EditText mm_ku1;//新密码
     private EditText mm_ku2;//再次输入新密码
@@ -39,7 +40,15 @@ public class MimaActivity extends AppCompatActivity{
         init();
         putStringGender = AnalysisUtils.readLoginUserName(this);
 
+        Intent intent=getIntent();
+        xz_ku.setText(intent.getStringExtra("password"));
+        mm_ku1.setText(intent.getStringExtra("zpassword"));
+        mm_ku2.setText(intent.getStringExtra("zcpassword"));
+
         iv_fh=findViewById(R.id.iv_fh);
+
+        tv_login=findViewById(R.id.tv_login);
+
 
 
         //返回上一页面
@@ -57,6 +66,8 @@ public class MimaActivity extends AppCompatActivity{
         mm_ku2 = (EditText) findViewById(R.id.mm_ku2);
         qrj = (Button) findViewById(R.id.qrj);
 
+        Intent intent=getIntent();
+        String id1=intent.getStringExtra("id");
 
         qrj.setOnClickListener(new View.OnClickListener(){
 
@@ -82,25 +93,27 @@ public class MimaActivity extends AppCompatActivity{
                     Toast.makeText(MimaActivity.this, "两次输入的新密码不一致", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
+
+                    //修改密码
+                    Mima mima=new Mima();
+                    mima.setId(id1);
+                    mima.setPassword(newPsw);
+                    modifyPsw(mima);
                     Toast.makeText(MimaActivity.this, "新密码设置成功", Toast.LENGTH_SHORT).show();
-                    //修改登录成功时保存在SharedPreferences中的密码
-                    modifyPsw(newPsw);
                     Intent intent = new Intent(MimaActivity.this, LoginActivity.class);
                     startActivity(intent);
                     ZhanghaoActivity.instance.finish();//关闭设置页
                     MimaActivity.this.finish();//关闭当前页面
+
                 }
             }
 
             /**
-             * 修改登录成功时保存在SharedPreferences中的密码
+             * 修改密码
              */
-            private void modifyPsw(String newPsw) {
-                String md5Psw = MD5Utils.md5(newPsw);//把密码用MD5加密
-                SharedPreferences sp = getSharedPreferences("lg_name", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();//获取编辑器
-                editor.putString(  putStringGender, md5Psw);//保存新密码
-                editor.commit();//提交修改
+            private void modifyPsw(Mima mima) {
+                MimaService mimaService=new MimaService(MimaActivity.this);
+                mimaService.upddate(mima);
             }
             /**
              * 获取控件上的字符串

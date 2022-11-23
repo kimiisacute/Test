@@ -10,6 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
+        <service
+            android:name=".util.MimaService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".activity.QianbaoActivity"
             android:exported="false" />

@@ -2,19 +2,19 @@ package com.example.unny.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
+
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ToggleButton;
+
 
 import com.example.unny.R;
+
 
 public class GrzxActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener{
     //页面控件
@@ -31,6 +31,7 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_grzx);
         //获取控件
         iv_fh=findViewById(R.id.iv_fh);
@@ -102,6 +103,7 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
         });
 
     }
+
     //开关按钮
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -111,4 +113,5 @@ public class GrzxActivity extends AppCompatActivity implements CompoundButton.On
 
         }
     }
+
 }
