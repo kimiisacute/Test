@@ -71,14 +71,5 @@ public class DizhiDBService {
         //关闭数据库
         sqLiteDatabase.close();
     }
-    //删除
-    /*
-    public void delete(Tjdz tjdz){
-        //打开数据库
-        SQLiteDatabase sqLiteDatabase=dbOpenHelper.getWritableDatabase();
-        int a1 = sqLiteDatabase.delete("diz_db", "_id=?", new String[]{tjdz.getId()+""});
-        sqLiteDatabase.close();
 
-    }
-     */
 }

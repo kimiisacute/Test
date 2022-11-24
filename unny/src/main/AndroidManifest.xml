@@ -10,6 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Unny">
+        <service
+            android:name=".util.MimaService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".activity.ShoucangActivity"
             android:exported="false">
@@ -34,6 +39,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.JiangguoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MimaActivity"
             android:exported="false" />
         <activity
             android:name=".activity.OrderSuccessActivity"
